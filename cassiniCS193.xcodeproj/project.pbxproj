@@ -13,6 +13,7 @@
 		4A2622592105670E00D4A805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2622582105670E00D4A805 /* Assets.xcassets */; };
 		4A26225C2105670E00D4A805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A26225A2105670E00D4A805 /* LaunchScreen.storyboard */; };
 		4A2622662106D27100D4A805 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2622652106D27100D4A805 /* ThemeViewController.swift */; };
+		4A2622692106D56100D4A805 /* URLModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2622682106D56100D4A805 /* URLModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4A26225B2105670E00D4A805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A26225D2105670E00D4A805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A2622652106D27100D4A805 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		4A2622682106D56100D4A805 /* URLModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		4A2622502105670A00D4A805 /* cassiniCS193 */ = {
 			isa = PBXGroup;
 			children = (
+				4A2622672106D50B00D4A805 /* Models */,
 				4A2622642106D24500D4A805 /* Controllers */,
 				4A2622632105671C00D4A805 /* Supporting Files */,
 				4A2622552105670A00D4A805 /* Main.storyboard */,
@@ -81,6 +84,14 @@
 				4A2622652106D27100D4A805 /* ThemeViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4A2622672106D50B00D4A805 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A2622682106D56100D4A805 /* URLModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2622662106D27100D4A805 /* ThemeViewController.swift in Sources */,
+				4A2622692106D56100D4A805 /* URLModels.swift in Sources */,
 				4A2622542105670A00D4A805 /* ImageViewController.swift in Sources */,
 				4A2622522105670A00D4A805 /* AppDelegate.swift in Sources */,
 			);

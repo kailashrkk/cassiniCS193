@@ -9,7 +9,9 @@
 import UIKit
 
 class ThemeViewController: UIViewController {
-
+    
+    var models = URLModels()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,14 @@ class ThemeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier, let identifierURL = models.all[identifier]{
+            if let vc = segue.destination as? ImageViewController{
+                vc.imageURL = identifierURL;
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
