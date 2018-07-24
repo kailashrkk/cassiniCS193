@@ -10,6 +10,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="2cw-RT-V9L">
+            <objects>
+                <splitViewController id="uY8-QS-4uS" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="D3A-BK-Wky" kind="relationship" relationship="masterViewController" id="vst-R6-OUu"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="e3h-fe-0lI"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eq4-CY-Ft4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2642" y="-363"/>
+        </scene>
+        <!--Theme View Controller-->
+        <scene sceneID="Izy-of-obP">
+            <objects>
+                <viewController id="LEb-Gx-NWV" customClass="ThemeViewController" customModule="cassiniCS193" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eok-L0-Uge">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Mec-lb-cf3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="caW-wK-KEv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyj-It-XJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368.80000000000001" y="-677.58620689655174"/>
+        </scene>
         <!--Image View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,26 +47,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PUr-6t-5et">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNC-JE-vJ8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PUr-6t-5et" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Cga-1s-RFg"/>
-                            <constraint firstAttribute="bottom" secondItem="PUr-6t-5et" secondAttribute="bottom" id="iKx-3M-KZW"/>
-                            <constraint firstItem="PUr-6t-5et" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j9E-La-2L6"/>
-                            <constraint firstItem="PUr-6t-5et" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nua-av-Yye"/>
+                            <constraint firstItem="XNC-JE-vJ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4aZ-d0-jkG"/>
+                            <constraint firstAttribute="bottom" secondItem="XNC-JE-vJ8" secondAttribute="bottom" id="6Nk-Uh-1Z2"/>
+                            <constraint firstItem="XNC-JE-vJ8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P2T-Jg-3vb"/>
+                            <constraint firstItem="XNC-JE-vJ8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dj7-Y0-hjI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="PUr-6t-5et" id="6Ho-fD-csU"/>
+                        <outlet property="scrollView" destination="XNC-JE-vJ8" id="wxJ-PW-ChV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="133.00492610837438"/>
+            <point key="canvasLocation" x="-1348" y="205"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qTw-yK-0mC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D3A-BK-Wky" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jKw-1D-3ML">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LEb-Gx-NWV" kind="relationship" relationship="rootViewController" id="aak-iR-onf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRZ-fp-niA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1311.2" y="-677.58620689655174"/>
         </scene>
     </scenes>
 </document>
